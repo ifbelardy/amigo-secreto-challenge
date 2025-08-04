@@ -1,18 +1,15 @@
 
-// Declaración de variables
+// Declaración de variables globales
 let amigos = [];
-let amigo;
-
-
 
 
 // Funciión que actualiza la lista de amigos visible
 function actualizarListaAmigos(){
     let lista = document.getElementById('listaAmigos');
     lista.innerHTML = '';
-    for (amigo in amigos){
+    for (amigo of amigos){
         const li = document.createElement('li');
-        li.textContent = amigos[amigo];
+        li.textContent = amigo;
         lista.append(li);
     }
 }
